@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SE Cleaning Services | Premium Cleaning in Ireland</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -19,11 +20,11 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#5D5CDE',
-                        secondary: '#FBBF24',
-                        accent: '#E0E7FF',
-                        dark: '#111827',
-                        muted: '#4B5563',
+                        primary: '#4F46E5', // Indigo
+                        secondary: '#F59E0B', // Amber
+                        dark: '#0F172A',
+                        muted: '#64748B',
+                        accent: '#EEF2FF'
                     },
                     fontFamily: {
                         sans: ['Plus Jakarta Sans', 'sans-serif'],
@@ -36,7 +37,8 @@
         }
     </script>
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .blob {
             position: absolute;
             z-index: -1;
@@ -53,7 +55,7 @@
         }
         .glass { background: rgba(253, 252, 254, 0.8); backdrop-filter: blur(10px); }
         .bg-pattern {
-            background-image: radial-gradient(#5D5CDE 0.5px, transparent 0.5px);
+            background-image: radial-gradient(#4F46E5 0.5px, transparent 0.5px);
             background-size: 20px 20px;
             opacity: 0.1;
         }
@@ -62,13 +64,13 @@
             height: 50px;
             background: white;
             border-radius: 50%;
-            border: 1px solid #E0E7FF;
-            color: #5D5CDE !important;
+            border: 1px solid #EEF2FF;
+            color: #4F46E5 !important;
             transition: all 0.3s ease;
         }
         .swiper-button-next:after, .swiper-button-prev:after { font-size: 18px; font-weight: bold; }
-        .swiper-button-next:hover, .swiper-button-prev:hover { background: #5D5CDE; color: white !important; }
-        .swiper-pagination-bullet-active { background: #5D5CDE !important; }
+        .swiper-button-next:hover, .swiper-button-prev:hover { background: #4F46E5; color: white !important; }
+        .swiper-pagination-bullet-active { background: #4F46E5 !important; }
     </style>
 </head>
 <body class="bg-[#FDFCFE] text-dark overflow-x-hidden selection:bg-primary selection:text-white">
@@ -82,17 +84,15 @@
             </div>
             
             <div class="hidden lg:flex space-x-12 items-center font-bold text-muted text-sm">
-                <a href="index.html" class="text-primary transition-colors">Home</a>
-                <a href="services.html" class="hover:text-primary transition-colors">Services</a>
-                <a href="gallery.html" class="hover:text-primary transition-colors">Gallery</a>
-                <a href="index.html#pricing" class="hover:text-primary transition-colors">Pricing</a>
-                <a href="about.html" class="hover:text-primary transition-colors">About Us</a>
-                <a href="index.html#reviews" class="hover:text-primary transition-colors">Reviews</a>
-                <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+                <a href="#home" class="text-primary transition-colors">Home</a>
+                <a href="#services" class="hover:text-primary transition-colors">Services</a>
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#gallery" class="hover:text-primary transition-colors">Gallery</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
             </div>
 
             <div class="flex items-center space-x-4">
-                <a href="contact.html" class="hidden sm:block bg-primary text-white px-8 py-3.5 rounded-full font-bold shadow-xl shadow-primary/20 hover:scale-105 hover:bg-[#4A49C1] transition-all active:scale-95 text-sm">
+                <a href="#contact" class="hidden sm:block bg-primary text-white px-8 py-3.5 rounded-full font-bold shadow-xl shadow-primary/20 hover:scale-105 hover:bg-[#4A49C1] transition-all active:scale-95 text-sm">
                     Book Now
                 </a>
                 <button class="lg:hidden text-2xl text-primary">
@@ -102,64 +102,54 @@
         </div>
     </nav>
 
-    <!-- Hero Slider Section -->
-    <section id="home" class="relative min-h-screen overflow-hidden">
-        <div class="swiper hero-slider h-full">
+    <!-- Hero Section -->
+    <section id="home" class="relative overflow-hidden">
+        <div class="swiper hero-slider w-full h-full">
             <div class="swiper-wrapper">
-                
                 <!-- Slide 1: Residential -->
-                <div class="swiper-slide min-h-screen flex items-center">
-                    <div class="blob w-[600px] h-[600px] bg-accent -top-40 -right-40"></div>
-                    <div class="blob w-[400px] h-[400px] bg-[#FAE8FF] -bottom-20 -left-20"></div>
+                <div class="swiper-slide min-h-[85vh] lg:min-h-screen flex items-center pt-32 pb-20">
+                    <div class="blob w-[500px] h-[500px] bg-primary/10 -top-20 -right-20"></div>
                     <div class="max-w-[1280px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center w-full">
                         <div class="space-y-10 relative z-10">
                             <div class="inline-flex items-center gap-2 bg-white border border-accent text-primary px-5 py-2 rounded-full text-xs font-bold shadow-sm">
-                                <span class="bg-primary text-white px-2 py-0.5 rounded-full text-[10px] mr-1 uppercase">Promo</span>
-                                18 Years of Excellence - Grab 20% Discount
+                                <span class="bg-primary text-white px-2 py-0.5 rounded-full text-[10px] mr-1 uppercase">Residential</span>
+                                Ireland's Most Trusted Cleaning Team
                             </div>
-                            <h1 class="text-6xl lg:text-[5rem] font-extrabold text-dark leading-[1.05] tracking-tight">Clean home, <br><span class="text-primary">like magic.</span></h1>
-                            <p class="text-lg text-muted max-w-lg leading-relaxed font-medium">Professional, meticulous cleaning services across Ireland. We transform your space into a sanctuary with eco-friendly solutions.</p>
+                            <h1 class="text-6xl lg:text-[5rem] font-extrabold text-dark leading-[1.05] tracking-tight">Your home, <br><span class="text-primary">reborn.</span></h1>
+                            <p class="text-lg text-muted max-w-lg leading-relaxed font-medium">Experience the pinnacle of Irish cleaning excellence. We bring hotel-standard luxury to your private residence.</p>
                             <div class="flex flex-col sm:flex-row items-center gap-6 pt-4">
-                                <button class="w-full sm:w-auto bg-primary text-white px-10 py-5 rounded-full font-bold text-lg shadow-2xl shadow-primary/30 hover:-translate-y-1 transition-all">Book Online Now</button>
-                                <div class="flex items-center gap-4">
-                                    <div class="flex -space-x-2">
-                                        <img src="https://i.pravatar.cc/100?u=1" class="w-10 h-10 rounded-full border-2 border-white">
-                                        <img src="https://i.pravatar.cc/100?u=2" class="w-10 h-10 rounded-full border-2 border-white">
-                                        <img src="https://i.pravatar.cc/100?u=3" class="w-10 h-10 rounded-full border-2 border-white">
-                                    </div>
-                                    <div class="text-xs">
-                                        <p class="font-extrabold text-dark">1,200+ Reviews</p>
-                                        <div class="flex text-secondary text-[8px]"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                                    </div>
+                                <a href="#contact" class="w-full sm:w-auto bg-primary text-white px-10 py-5 rounded-full flex items-center justify-center font-bold text-lg shadow-2xl shadow-primary/30 hover:-translate-y-1 transition-all">Book a Deep Clean</a>
+                                <div class="flex items-center gap-4 text-muted font-bold text-sm">
+                                    <i class="fa-solid fa-shield-heart text-2xl text-primary"></i>
+                                    <span>Vetted & Insured Staff</span>
                                 </div>
                             </div>
                         </div>
                         <div class="relative flex justify-center lg:justify-end">
                             <div class="relative w-full max-w-xl">
                                 <div class="absolute inset-0 bg-accent rounded-[30%_70%_70%_30%/30%_30%_70%_70%] scale-110 opacity-60 animate-float"></div>
-                                <img src="./assets/cleaner_dribbble.png" alt="Residential Cleaner" class="relative z-10 w-full h-auto drop-shadow-[0_35px_35px_rgba(0,0,0,0.15)]">
+                                <img src="./assets/hero_portrait.png" alt="Happy Customer" class="relative z-10 w-full h-auto drop-shadow-[0_35px_35px_rgba(0,0,0,0.15)]">
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Slide 2: Commercial -->
-                <div class="swiper-slide min-h-screen flex items-center">
-                    <div class="blob w-[600px] h-[600px] bg-[#E0F2FE] -top-40 -left-40 opacity-30"></div>
-                    <div class="blob w-[400px] h-[400px] bg-accent -bottom-20 -right-20"></div>
+                <div class="swiper-slide min-h-[85vh] lg:min-h-screen flex items-center pt-32 pb-20">
+                    <div class="blob w-[600px] h-[600px] bg-secondary/10 top-20 left-20"></div>
                     <div class="max-w-[1280px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center w-full">
                         <div class="space-y-10 relative z-10">
                             <div class="inline-flex items-center gap-2 bg-white border border-accent text-primary px-5 py-2 rounded-full text-xs font-bold shadow-sm">
-                                <span class="bg-primary text-white px-2 py-0.5 rounded-full text-[10px] mr-1 uppercase">Business</span>
+                                <span class="bg-secondary text-dark px-2 py-0.5 rounded-full text-[10px] mr-1 uppercase font-black">Business</span>
                                 Trusted by Leading Irish Enterprises
                             </div>
                             <h1 class="text-6xl lg:text-[5rem] font-extrabold text-dark leading-[1.05] tracking-tight">Workspace, <br><span class="text-primary">reimagined.</span></h1>
                             <p class="text-lg text-muted max-w-lg leading-relaxed font-medium">Boost your team's productivity with a pristine office environment. Flexible schedules tailored to your business.</p>
                             <div class="flex flex-col sm:flex-row items-center gap-6 pt-4">
-                                <button class="w-full sm:w-auto bg-primary text-white px-10 py-5 rounded-full font-bold text-lg shadow-2xl shadow-primary/30 hover:-translate-y-1 transition-all">Get Corporate Quote</button>
+                                <a href="#contact" class="w-full sm:w-auto bg-primary text-white px-10 py-5 rounded-full flex items-center justify-center font-bold text-lg shadow-2xl shadow-primary/30 hover:-translate-y-1 transition-all">Get Corporate Quote</a>
                                 <div class="flex items-center gap-4 text-muted font-bold text-sm">
                                     <i class="fa-solid fa-building-circle-check text-2xl text-primary"></i>
-                                    <span>Fully Insured & Vetted</span>
+                                    <span>Commercial Grade Equipment</span>
                                 </div>
                             </div>
                         </div>
@@ -173,9 +163,8 @@
                 </div>
 
                 <!-- Slide 3: Team -->
-                <div class="swiper-slide min-h-screen flex items-center">
-                    <div class="blob w-[600px] h-[600px] bg-secondary/10 -bottom-40 -left-40"></div>
-                    <div class="blob w-[400px] h-[400px] bg-primary/10 top-20 right-20"></div>
+                <div class="swiper-slide min-h-[85vh] lg:min-h-screen flex items-center pt-32 pb-20">
+                    <div class="blob w-[600px] h-[600px] bg-primary/10 -bottom-40 -left-40"></div>
                     <div class="max-w-[1280px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center w-full">
                         <div class="space-y-10 relative z-10">
                             <div class="inline-flex items-center gap-2 bg-white border border-accent text-primary px-5 py-2 rounded-full text-xs font-bold shadow-sm">
@@ -185,7 +174,7 @@
                             <h1 class="text-6xl lg:text-[5rem] font-extrabold text-dark leading-[1.05] tracking-tight">Our team, <br><span class="text-primary">your peace.</span></h1>
                             <p class="text-lg text-muted max-w-lg leading-relaxed font-medium">Meet the best cleaning professionals in Ireland. Trained, background-checked, and dedicated to excellence.</p>
                             <div class="flex flex-col sm:flex-row items-center gap-6 pt-4">
-                                <button class="w-full sm:w-auto bg-primary text-white px-10 py-5 rounded-full font-bold text-lg shadow-2xl shadow-primary/30 hover:-translate-y-1 transition-all">Meet the Team</button>
+                                <a href="#contact" class="w-full sm:w-auto bg-primary text-white px-10 py-5 rounded-full flex items-center justify-center font-bold text-lg shadow-2xl shadow-primary/30 hover:-translate-y-1 transition-all">Meet the Team</a>
                             </div>
                         </div>
                         <div class="relative flex justify-center lg:justify-end">
@@ -196,20 +185,18 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-            <!-- Hero Pagination -->
             <div class="swiper-pagination hero-pagination !bottom-12"></div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-32 bg-[#F9FAFB]">
+    <section id="services" class="py-20 bg-slate-50">
         <div class="max-w-[1280px] mx-auto px-6">
             <div class="flex flex-col lg:flex-row justify-between items-end mb-12 gap-8">
                 <div class="space-y-4 text-center lg:text-left">
                     <h4 class="text-primary font-black uppercase tracking-widest text-xs">Our Services</h4>
-                    <h2 class="text-4xl lg:text-5xl font-extrabold text-dark tracking-tight">Cleaning solutions <br>for every corner.</h2>
+                    <h2 class="text-4xl lg:text-5xl font-extrabold text-dark tracking-tight">Cleaning solutions for every corner.</h2>
                 </div>
                 <div class="flex gap-4">
                     <div class="swiper-button-prev !static !m-0"></div>
@@ -219,58 +206,36 @@
 
             <div class="swiper services-slider overflow-visible">
                 <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
+                    <!-- Slide 1: Standard cleaning -->
                     <div class="swiper-slide h-auto">
-                        <div class="group bg-white p-12 rounded-[3rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 h-full">
-                            <div class="w-16 h-16 bg-[#F5F3FF] text-primary rounded-2xl flex items-center justify-center text-2xl mb-10 group-hover:scale-110 transition-transform">
+                        <div class="group bg-white p-12 rounded-[3rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 h-full text-center lg:text-left">
+                            <div class="w-16 h-16 bg-accent text-primary rounded-2xl flex items-center justify-center text-2xl mb-10 group-hover:scale-110 transition-transform mx-auto lg:ml-0">
                                 <i class="fa-solid fa-house-chimney-window"></i>
                             </div>
-                            <h3 class="text-2xl font-extrabold text-dark mb-4">House Cleaning</h3>
-                            <p class="text-muted leading-relaxed text-sm font-medium">Meticulous cleaning for your home. We cover everything from dusting to deep sanitization.</p>
+                            <h3 class="text-2xl font-extrabold text-dark mb-4">Standard Cleaning</h3>
+                            <p class="text-muted leading-relaxed text-sm font-medium">Regular upkeep for your home or office. Perfect for maintaining a healthy and fresh environment.</p>
                         </div>
                     </div>
 
-                    <!-- Slide 2 -->
+                    <!-- Slide 2: Deep clean -->
                     <div class="swiper-slide h-auto">
-                        <div class="group bg-white p-12 rounded-[3rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 h-full">
-                            <div class="w-16 h-16 bg-[#FFFBEB] text-secondary rounded-2xl flex items-center justify-center text-2xl mb-10 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-building"></i>
-                            </div>
-                            <h3 class="text-2xl font-extrabold text-dark mb-4">Office Cleaning</h3>
-                            <p class="text-muted leading-relaxed text-sm font-medium">Boost productivity with a spotless workspace. Daily or weekly tailored schedules.</p>
-                        </div>
-                    </div>
-
-                    <!-- Slide 3 -->
-                    <div class="swiper-slide h-auto">
-                        <div class="group bg-white p-12 rounded-[3rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 h-full">
-                            <div class="w-16 h-16 bg-[#ECFDF5] text-green-500 rounded-2xl flex items-center justify-center text-2xl mb-10 group-hover:scale-110 transition-transform">
+                        <div class="group bg-white p-12 rounded-[3rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 h-full text-center lg:text-left">
+                            <div class="w-16 h-16 bg-[#FFFBEB] text-secondary rounded-2xl flex items-center justify-center text-2xl mb-10 group-hover:scale-110 transition-transform mx-auto lg:ml-0">
                                 <i class="fa-solid fa-wand-magic-sparkles"></i>
                             </div>
                             <h3 class="text-2xl font-extrabold text-dark mb-4">Deep Clean</h3>
-                            <p class="text-muted leading-relaxed text-sm font-medium">Intensive cleaning for move-ins or move-outs. No corner is left untouched.</p>
+                            <p class="text-muted leading-relaxed text-sm font-medium">An intensive, top-to-bottom thorough scrub. We tackle the hidden grime that regular cleaning misses.</p>
                         </div>
                     </div>
 
-                    <!-- Slide 4 (New) -->
+                    <!-- Slide 3: Moving-related cleaning -->
                     <div class="swiper-slide h-auto">
-                        <div class="group bg-white p-12 rounded-[3rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 h-full">
-                            <div class="w-16 h-16 bg-[#E0F2FE] text-blue-500 rounded-2xl flex items-center justify-center text-2xl mb-10 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-window-restore"></i>
+                        <div class="group bg-white p-12 rounded-[3rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 h-full text-center lg:text-left">
+                            <div class="w-16 h-16 bg-[#ECFDF5] text-green-500 rounded-2xl flex items-center justify-center text-2xl mb-10 group-hover:scale-110 transition-transform mx-auto lg:ml-0">
+                                <i class="fa-solid fa-truck-moving"></i>
                             </div>
-                            <h3 class="text-2xl font-extrabold text-dark mb-4">Window Care</h3>
-                            <p class="text-muted leading-relaxed text-sm font-medium">Crystal clear windows for your entire property. Professional streak-free results guaranteed.</p>
-                        </div>
-                    </div>
-
-                    <!-- Slide 5 (New) -->
-                    <div class="swiper-slide h-auto">
-                        <div class="group bg-white p-12 rounded-[3rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 h-full">
-                            <div class="w-16 h-16 bg-[#FEF2F2] text-red-500 rounded-2xl flex items-center justify-center text-2xl mb-10 group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-couch"></i>
-                            </div>
-                            <h3 class="text-2xl font-extrabold text-dark mb-4">Upholstery</h3>
-                            <p class="text-muted leading-relaxed text-sm font-medium">Revitalize your furniture and carpets. We remove deep-seated allergens and stains.</p>
+                            <h3 class="text-2xl font-extrabold text-dark mb-4">Moving Cleaning</h3>
+                            <p class="text-muted leading-relaxed text-sm font-medium">Specialized move-in/move-out cleaning to ensure your transition is spotless and stress-free.</p>
                         </div>
                     </div>
                 </div>
@@ -279,318 +244,190 @@
         </div>
     </section>
 
-    <!-- Gallery Section - High-End Masonry -->
-    <section id="gallery" class="py-32 bg-white relative">
-        <div class="max-w-[1280px] mx-auto px-6">
-            <div class="flex flex-col lg:flex-row justify-between items-end mb-20 gap-8">
-                <div class="space-y-4 text-center lg:text-left">
-                    <h4 class="text-primary font-black uppercase tracking-widest text-xs">Portfolio of Excellence</h4>
-                    <h2 class="text-5xl font-extrabold text-dark tracking-tight">Real results, <br>zero compromises.</h2>
-                </div>
-                <!-- Filter Tabs -->
-                <div class="flex bg-slate-50 p-2 rounded-2xl gap-2 filter-tabs">
-                    <button data-filter="all" class="filter-btn px-6 py-3 bg-white text-primary rounded-xl font-bold shadow-sm text-sm active transition-all">All Work</button>
-                    <button data-filter="residential" class="filter-btn px-6 py-3 text-muted hover:text-primary rounded-xl font-bold text-sm transition-all">Residential</button>
-                    <button data-filter="commercial" class="filter-btn px-6 py-3 text-muted hover:text-primary rounded-xl font-bold text-sm transition-all">Commercial</button>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white relative overflow-hidden">
+        <div class="blob w-[600px] h-[600px] bg-primary/5 top-0 left-0"></div>
+        <div class="max-w-[1280px] mx-auto px-6 grid lg:grid-cols-2 gap-24 items-center">
+            <div class="relative">
+                <img src="./assets/trust_hero.png" class="rounded-[4rem] shadow-2xl relative z-10">
+                <div class="absolute -bottom-10 -left-10 bg-secondary p-8 rounded-[3rem] text-white shadow-2xl z-20">
+                    <p class="text-5xl font-black">18+</p>
+                    <p class="text-xs font-bold uppercase tracking-widest">Years Expertise</p>
                 </div>
             </div>
-
-            <!-- Masonry Grid -->
-            <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Item 1: Large Featured -->
-                <div class="gallery-item commercial residential group relative overflow-hidden rounded-[3rem] shadow-2xl lg:row-span-2 h-[600px] transition-all duration-500">
-                    <a href="./assets/gallery_results.png" data-fancybox="gallery" data-caption="Kitchen Restoration - Before & After">
-                        <img src="./assets/gallery_results.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
-                    </a>
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-12 pointer-events-none">
-                        <span class="bg-secondary text-dark text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full w-fit mb-4">Before & After</span>
-                        <h3 class="text-white text-2xl font-bold mb-2">Kitchen Restoration</h3>
-                        <p class="text-blue-100/60 text-sm font-medium">Deep grease removal and surface polishing in Dublin 4.</p>
-                        <div class="mt-6 flex items-center gap-2 text-secondary text-xs font-bold">
-                            <i class="fa-solid fa-location-dot"></i> Dublin City
+            <div class="space-y-10">
+                <h4 class="text-primary font-black uppercase tracking-widest text-xs">Our Story</h4>
+                <h2 class="text-5xl font-extrabold text-dark tracking-tight leading-tight">Nearly two decades of <br><span class="text-primary">Irish Excellence.</span></h2>
+                <div class="space-y-8">
+                    <div class="flex gap-6">
+                        <div class="w-14 h-14 bg-accent text-primary rounded-2xl flex items-center justify-center text-2xl shrink-0"><i class="fa-solid fa-heart"></i></div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Passion for Perfection</h4>
+                            <p class="text-muted leading-relaxed font-medium">We don't just clean; we restore. Every project is handled with the meticulous attention to detail it deserves.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="w-14 h-14 bg-accent text-primary rounded-2xl flex items-center justify-center text-2xl shrink-0"><i class="fa-solid fa-earth-europe"></i></div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Irish Owned</h4>
+                            <p class="text-muted leading-relaxed font-medium">Proudly 100% Irish-owned and operated. We understand the unique needs of homes and businesses across the country.</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Item 2 -->
-                <div class="gallery-item residential group relative overflow-hidden rounded-[3rem] shadow-xl h-[350px] transition-all duration-500">
-                    <a href="./assets/gallery_kitchen.png" data-fancybox="gallery" data-caption="Modern Kitchen Detail">
-                        <img src="./assets/gallery_kitchen.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
-                    </a>
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-10 pointer-events-none">
-                        <span class="bg-primary text-white text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full w-fit mb-4">Residential</span>
-                        <h3 class="text-white text-xl font-bold mb-1">Modern Kitchen Detail</h3>
-                        <div class="flex items-center gap-2 text-secondary text-[10px] font-bold">
-                            <i class="fa-solid fa-location-dot"></i> Galway
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="gallery-item commercial group relative overflow-hidden rounded-[3rem] shadow-xl h-[350px] transition-all duration-500">
-                    <a href="./assets/gallery_hallway.png" data-fancybox="gallery" data-caption="Corporate Hallway Polishing">
-                        <img src="./assets/gallery_hallway.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
-                    </a>
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-10 pointer-events-none">
-                        <span class="bg-primary text-white text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full w-fit mb-4">Commercial</span>
-                        <h3 class="text-white text-xl font-bold mb-1">Corporate Hallway</h3>
-                        <div class="flex items-center gap-2 text-secondary text-[10px] font-bold">
-                            <i class="fa-solid fa-location-dot"></i> Cork City
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 4 -->
-                <div class="gallery-item residential group relative overflow-hidden rounded-[3rem] shadow-xl h-[218px] lg:col-span-2 transition-all duration-500">
-                    <a href="./assets/residential_cleaning_living_room.png" data-fancybox="gallery" data-caption="Luxury Living Room Deep Clean">
-                        <img src="./assets/residential_cleaning_living_room.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
-                    </a>
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-10 pointer-events-none">
-                        <div class="flex justify-between items-end w-full">
-                            <div>
-                                <span class="bg-primary text-white text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full w-fit mb-4 inline-block">Deep Clean</span>
-                                <h3 class="text-white text-xl font-bold mb-1">Luxury Living Room</h3>
-                            </div>
-                            <div class="text-right">
-                                <p class="text-blue-100/60 text-[10px] font-bold uppercase tracking-widest mb-1">Area</p>
-                                <p class="text-white font-bold text-sm">Killiney, Dublin</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-16 text-center">
-                <a href="gallery.html" class="px-12 py-5 border-2 border-primary text-primary rounded-full font-bold hover:bg-primary hover:text-white transition-all shadow-xl shadow-primary/5 inline-block">View Full Portfolio</a>
             </div>
         </div>
     </section>
 
-
-    <!-- Why Us Section (About) - High Impact Asymmetrical Layout -->
-    <section id="about" class="py-32 bg-white relative overflow-hidden">
+    <!-- Process Section -->
+    <section id="process" class="py-20 bg-slate-50 relative overflow-hidden">
         <div class="max-w-[1280px] mx-auto px-6 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-20 items-center">
-                <!-- Left: Visual Impact -->
-                <div class="relative group">
-                    <div class="blob w-[500px] h-[500px] bg-primary/5 -top-20 -left-20"></div>
-                    <div class="relative z-10 rounded-[4rem] overflow-hidden shadow-2xl border-8 border-white group-hover:scale-[1.02] transition-transform duration-700">
-                        <img src="./assets/trust_hero.png" alt="Professional Cleaning Detail" class="w-full h-auto">
-                        <div class="absolute inset-0 bg-gradient-to-t from-dark/40 to-transparent"></div>
-                    </div>
-                    
-                    <!-- Floating Badge -->
-                    <div class="absolute -bottom-10 -right-10 bg-white p-10 rounded-[3rem] shadow-2xl border border-gray-100 z-20 animate-float">
-                        <div class="flex items-center gap-6">
-                            <div class="text-6xl font-black text-primary leading-none">18</div>
-                            <div>
-                                <p class="text-xs font-black text-muted uppercase tracking-[0.2em] mb-1">Years of</p>
-                                <p class="text-xl font-bold text-dark">Experience</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Decorative Element -->
-                    <div class="absolute top-10 -left-10 w-32 h-32 bg-secondary rounded-[2rem] -rotate-12 opacity-20 -z-10"></div>
+            <div class="text-center mb-12">
+                <h4 class="text-primary font-black uppercase tracking-widest text-xs mb-4">How we work</h4>
+                <h2 class="text-5xl font-black mb-6 text-dark tracking-tight">Our 4-Step Process</h2>
+                <p class="text-muted max-w-xl mx-auto font-medium">How we deliver consistent, world-class results every time.</p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="group p-10 bg-white rounded-[3.5rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+                    <div class="text-5xl font-black text-secondary mb-8 group-hover:scale-110 transition-transform inline-block">01</div>
+                    <h4 class="text-xl font-bold mb-4 text-dark">Inspection</h4>
+                    <p class="text-muted text-sm leading-relaxed font-medium">We assess your space and identify specific needs and high-traffic areas.</p>
                 </div>
-
-                <!-- Right: Trust Content -->
-                <div class="space-y-12">
-                    <div class="space-y-6">
-                        <h4 class="text-primary font-black uppercase tracking-widest text-xs">Unmatched Quality</h4>
-                        <h2 class="text-5xl lg:text-6xl font-extrabold text-dark tracking-tight leading-[1.1]">Why Ireland Trusts <br><span class="text-primary">SE Cleaning</span></h2>
-                        <p class="text-muted text-lg font-medium leading-relaxed">Since 2008, we've set the gold standard for professional cleaning in Dublin, Cork, and Galway.</p>
-                    </div>
-
-                    <div class="space-y-8">
-                        <!-- Trust Block 1 -->
-                        <div class="group flex items-start gap-8 p-6 rounded-[2.5rem] hover:bg-slate-50 transition-all duration-300">
-                            <div class="w-16 h-16 bg-white shadow-lg rounded-2xl flex items-center justify-center text-3xl text-primary group-hover:bg-primary group-hover:text-white transition-all shrink-0">
-                                <i class="fa-solid fa-shield-halved"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-dark mb-2">Garda Vetted Security</h3>
-                                <p class="text-muted text-sm leading-relaxed font-medium">Every member of our team is fully background checked for your absolute peace of mind.</p>
-                            </div>
-                        </div>
-
-                        <!-- Trust Block 2 -->
-                        <div class="group flex items-start gap-8 p-6 rounded-[2.5rem] hover:bg-slate-50 transition-all duration-300">
-                            <div class="w-16 h-16 bg-white shadow-lg rounded-2xl flex items-center justify-center text-3xl text-primary group-hover:bg-primary group-hover:text-white transition-all shrink-0">
-                                <i class="fa-solid fa-leaf"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-dark mb-2">Sustainable Eco-Clean</h3>
-                                <p class="text-muted text-sm leading-relaxed font-medium">We use 100% non-toxic, pet-safe products that protect both your family and the Irish environment.</p>
-                            </div>
-                        </div>
-
-                        <!-- Trust Block 3 -->
-                        <div class="group flex items-start gap-8 p-6 rounded-[2.5rem] hover:bg-slate-50 transition-all duration-300">
-                            <div class="w-16 h-16 bg-white shadow-lg rounded-2xl flex items-center justify-center text-3xl text-primary group-hover:bg-primary group-hover:text-white transition-all shrink-0">
-                                <i class="fa-solid fa-award"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-dark mb-2">100% Satisfaction Guarantee</h3>
-                                <p class="text-muted text-sm leading-relaxed font-medium">Not happy with the result? We'll re-clean for free within 24 hours. No questions asked.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pt-6">
-                        <a href="about.html" class="bg-primary text-white px-10 py-5 rounded-full font-bold text-lg shadow-2xl shadow-primary/30 hover:-translate-y-1 transition-all inline-block">Learn Our Process</a>
-                    </div>
+                <div class="group p-10 bg-white rounded-[3.5rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+                    <div class="text-5xl font-black text-secondary mb-8 group-hover:scale-110 transition-transform inline-block">02</div>
+                    <h4 class="text-xl font-bold mb-4 text-dark">Plan</h4>
+                    <p class="text-muted text-sm leading-relaxed font-medium">Custom cleaning schedule and non-toxic product selection for your project.</p>
+                </div>
+                <div class="group p-10 bg-white rounded-[3.5rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+                    <div class="text-5xl font-black text-secondary mb-8 group-hover:scale-110 transition-transform inline-block">03</div>
+                    <h4 class="text-xl font-bold mb-4 text-dark">Execute</h4>
+                    <p class="text-muted text-sm leading-relaxed font-medium">Our vetted team performs the clean using medical-grade sanitization protocols.</p>
+                </div>
+                <div class="group p-10 bg-white rounded-[3.5rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+                    <div class="text-5xl font-black text-secondary mb-8 group-hover:scale-110 transition-transform inline-block">04</div>
+                    <h4 class="text-xl font-bold mb-4 text-dark">Review</h4>
+                    <p class="text-muted text-sm leading-relaxed font-medium">Final walk-through to ensure our 100% satisfaction guarantee is met.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-32 bg-[#F9FAFB]">
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white">
         <div class="max-w-[1280px] mx-auto px-6">
-            <div class="text-center mb-20 space-y-4">
-                <h4 class="text-primary font-black uppercase tracking-widest text-xs">Pricing Plans</h4>
-                <h2 class="text-5xl font-extrabold text-dark tracking-tight">Choose your clean</h2>
-                <p class="text-muted font-medium">Transparent pricing with no hidden fees.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Plan 1 -->
-                <div class="bg-white p-12 rounded-[3rem] border border-gray-100 shadow-sm hover:shadow-2xl transition-all">
-                    <h3 class="text-xl font-bold mb-4">Standard Clean</h3>
-                    <div class="text-5xl font-black text-dark mb-8">€89<span class="text-lg text-muted font-medium">/visit</span></div>
-                    <ul class="space-y-4 mb-10 text-muted font-medium">
-                        <li><i class="fa-solid fa-check text-primary mr-2"></i> All living areas</li>
-                        <li><i class="fa-solid fa-check text-primary mr-2"></i> Kitchen surfaces</li>
-                        <li><i class="fa-solid fa-check text-primary mr-2"></i> Bathroom sanitization</li>
-                        <li><i class="fa-solid fa-check text-primary mr-2"></i> Vacuuming & Mopping</li>
-                    </ul>
-                    <button class="w-full py-4 border-2 border-primary text-primary rounded-full font-bold hover:bg-primary hover:text-white transition-all">Select Plan</button>
-                </div>
-                <!-- Plan 2 (Featured) -->
-                <div class="bg-primary p-12 rounded-[3rem] shadow-2xl shadow-primary/30 relative overflow-hidden text-white scale-105 z-10">
-                    <div class="absolute top-8 right-8 bg-secondary text-dark px-4 py-1 rounded-full text-[10px] font-black uppercase">Popular</div>
-                    <h3 class="text-xl font-bold mb-4">Premium Clean</h3>
-                    <div class="text-5xl font-black mb-8 text-white">€149<span class="text-lg text-blue-100/60 font-medium">/visit</span></div>
-                    <ul class="space-y-4 mb-10 text-blue-100/80 font-medium">
-                        <li><i class="fa-solid fa-check text-secondary mr-2"></i> Everything in Standard</li>
-                        <li><i class="fa-solid fa-check text-secondary mr-2"></i> Inside Windows</li>
-                        <li><i class="fa-solid fa-check text-secondary mr-2"></i> Oven Deep Clean</li>
-                        <li><i class="fa-solid fa-check text-secondary mr-2"></i> Bed Linen Changing</li>
-                    </ul>
-                    <button class="w-full py-4 bg-white text-primary rounded-full font-bold hover:scale-105 transition-all shadow-xl shadow-black/10">Select Plan</button>
-                </div>
-                <!-- Plan 3 -->
-                <div class="bg-white p-12 rounded-[3rem] border border-gray-100 shadow-sm hover:shadow-2xl transition-all">
-                    <h3 class="text-xl font-bold mb-4">Deep Clean</h3>
-                    <div class="text-5xl font-black text-dark mb-8">€249<span class="text-lg text-muted font-medium">/visit</span></div>
-                    <ul class="space-y-4 mb-10 text-muted font-medium">
-                        <li><i class="fa-solid fa-check text-primary mr-2"></i> Everything in Premium</li>
-                        <li><i class="fa-solid fa-check text-primary mr-2"></i> Carpet Steam Clean</li>
-                        <li><i class="fa-solid fa-check text-primary mr-2"></i> Wall Spot Removal</li>
-                        <li><i class="fa-solid fa-check text-primary mr-2"></i> After Builders Special</li>
-                    </ul>
-                    <button class="w-full py-4 border-2 border-primary text-primary rounded-full font-bold hover:bg-primary hover:text-white transition-all">Select Plan</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Reviews Section -->
-    <section id="reviews" class="py-32 bg-white overflow-hidden">
-        <div class="max-w-[1280px] mx-auto px-6">
-            <div class="flex flex-col lg:flex-row justify-between items-end mb-20 gap-8">
+            <div class="flex flex-col lg:flex-row justify-between items-end mb-12 gap-8">
                 <div class="space-y-4 text-center lg:text-left">
-                    <h4 class="text-primary font-black uppercase tracking-widest text-xs">Customer Reviews</h4>
-                    <h2 class="text-5xl font-extrabold text-dark tracking-tight">Trust is our currency.</h2>
+                    <h4 class="text-primary font-black uppercase tracking-widest text-xs">Portfolio</h4>
+                    <h2 class="text-5xl font-black text-dark tracking-tight">Gallery of Excellence</h2>
+                </div>
+                <div class="flex flex-wrap justify-center gap-4 bg-accent p-2 rounded-3xl">
+                    <button class="filter-btn active bg-white text-primary px-8 py-3 rounded-2xl font-bold shadow-sm transition-all text-sm" data-filter="all">All Work</button>
+                    <button class="filter-btn text-muted px-8 py-3 rounded-2xl font-bold hover:text-primary transition-all text-sm" data-filter="residential">Residential</button>
+                    <button class="filter-btn text-muted px-8 py-3 rounded-2xl font-bold hover:text-primary transition-all text-sm" data-filter="commercial">Commercial</button>
                 </div>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-[#F9FAFB] p-10 rounded-[3rem] space-y-6">
-                    <div class="flex text-secondary text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="text-muted font-medium leading-relaxed italic">"The team from SE Cleaning is simply incredible. My house has never looked so spotless. Highly recommended for anyone in Dublin!"</p>
-                    <div class="flex items-center gap-4">
-                        <img src="https://i.pravatar.cc/100?u=a" class="w-12 h-12 rounded-full">
-                        <div>
-                            <p class="font-bold text-dark text-sm">Sarah Jenkins</p>
-                            <p class="text-muted text-[10px] font-bold uppercase tracking-wider">Dublin Resident</p>
-                        </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="gallery-grid">
+                <div class="gallery-item residential group relative overflow-hidden rounded-[3rem] aspect-[4/5] cursor-pointer" data-fancybox="gallery" href="./assets/gallery_kitchen.png">
+                    <img src="./assets/gallery_kitchen.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10">
+                        <p class="text-secondary font-black uppercase tracking-widest text-xs mb-2">Residential</p>
+                        <h4 class="text-white text-2xl font-bold">Kitchen Deep Clean</h4>
                     </div>
                 </div>
-                <div class="bg-[#F9FAFB] p-10 rounded-[3rem] space-y-6">
-                    <div class="flex text-secondary text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="text-muted font-medium leading-relaxed italic">"Very professional office cleaning. They are reliable, thorough, and always show up on time. Our productivity has definitely improved."</p>
-                    <div class="flex items-center gap-4">
-                        <img src="https://i.pravatar.cc/100?u=b" class="w-12 h-12 rounded-full">
-                        <div>
-                            <p class="font-bold text-dark text-sm">Mark O'Connor</p>
-                            <p class="text-muted text-[10px] font-bold uppercase tracking-wider">Business Owner</p>
-                        </div>
+                <div class="gallery-item commercial group relative overflow-hidden rounded-[3rem] aspect-[4/5] cursor-pointer" data-fancybox="gallery" href="./assets/gallery_hallway.png">
+                    <img src="./assets/gallery_hallway.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10">
+                        <p class="text-secondary font-black uppercase tracking-widest text-xs mb-2">Commercial</p>
+                        <h4 class="text-white text-2xl font-bold">Office Lobby</h4>
                     </div>
                 </div>
-                <div class="bg-[#F9FAFB] p-10 rounded-[3rem] space-y-6">
-                    <div class="flex text-secondary text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="text-muted font-medium leading-relaxed italic">"We used their deep cleaning service for our new apartment move-in. The results were better than we could have ever imagined!"</p>
-                    <div class="flex items-center gap-4">
-                        <img src="https://i.pravatar.cc/100?u=c" class="w-12 h-12 rounded-full">
-                        <div>
-                            <p class="font-bold text-dark text-sm">Elena Rossi</p>
-                            <p class="text-muted text-[10px] font-bold uppercase tracking-wider">Home Owner</p>
-                        </div>
+                <div class="gallery-item residential group relative overflow-hidden rounded-[3rem] aspect-[4/5] cursor-pointer" data-fancybox="gallery" href="./assets/gallery_results.png">
+                    <img src="./assets/gallery_results.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10">
+                        <p class="text-secondary font-black uppercase tracking-widest text-xs mb-2">Residential</p>
+                        <h4 class="text-white text-2xl font-bold">Living Room Polish</h4>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section - 2 Column with Map -->
-    <section id="contact" class="py-32 bg-white relative overflow-hidden">
-        <div class="blob w-[600px] h-[600px] bg-accent/20 -bottom-40 -left-40"></div>
-        <div class="max-w-[1280px] mx-auto px-6 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-                <!-- Left: Contact Form -->
-                <div class="bg-[#FDFCFE] rounded-[3rem] p-10 lg:p-16 shadow-2xl border border-gray-100 relative overflow-hidden">
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white relative">
+        <div class="max-w-[1280px] mx-auto px-6">
+            <div class="text-center mb-12 space-y-4">
+                <h4 class="text-primary font-black uppercase tracking-widest text-xs">Get In Touch</h4>
+                <h2 class="text-5xl font-extrabold text-dark tracking-tight">Ready to transform your space?</h2>
+                <p class="text-muted max-w-2xl mx-auto font-medium">Have a question or ready to book? Our team is here to help you achieve the perfect clean.</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-24 items-start">
+                <div class="bg-[#FDFCFE] rounded-[4rem] p-12 lg:p-20 shadow-2xl border border-gray-100 relative overflow-hidden">
                     <div class="blob w-[200px] h-[200px] bg-primary top-0 right-0 opacity-10"></div>
-                    <div class="relative z-10 space-y-10">
-                        <div class="space-y-4">
-                            <h2 class="text-5xl font-extrabold text-dark tracking-tight">Get a free quote</h2>
-                            <p class="text-muted font-medium">Professional cleaning is just one message away.</p>
+                    <div class="relative z-10 space-y-12">
+                        <div class="space-y-4 text-center">
+                            <h2 class="text-4xl font-extrabold text-dark tracking-tight">Send us a message</h2>
+                            <p class="text-muted font-medium">We typically respond within 2 business hours.</p>
                         </div>
-                        <form class="grid sm:grid-cols-2 gap-6">
-                            <input type="text" placeholder="Your Name" class="bg-gray-50 border border-gray-100 p-5 rounded-2xl outline-none focus:border-primary transition-all font-bold text-sm">
-                            <input type="email" placeholder="Email Address" class="bg-gray-50 border border-gray-100 p-5 rounded-2xl outline-none focus:border-primary transition-all font-bold text-sm">
-                            <select class="bg-gray-50 border border-gray-100 p-5 rounded-2xl outline-none focus:border-primary transition-all font-bold text-sm col-span-full text-muted">
-                                <option>Residential Cleaning</option>
-                                <option>Office Cleaning</option>
-                                <option>Deep Clean</option>
-                            </select>
-                            <textarea placeholder="Tell us about your space..." rows="4" class="bg-gray-50 border border-gray-100 p-5 rounded-2xl outline-none focus:border-primary transition-all font-bold text-sm col-span-full"></textarea>
-                            <button class="bg-primary text-white py-5 rounded-2xl font-bold text-lg shadow-xl shadow-primary/30 col-span-full hover:-translate-y-1 transition-all">Send Message</button>
+                        <form id="contactForm" class="grid sm:grid-cols-2 gap-8">
+                            <div class="space-y-2">
+                                <label class="text-xs font-black uppercase tracking-widest text-muted ml-4">Full Name</label>
+                                <input type="text" name="name" required placeholder="John Doe" class="w-full bg-gray-50 border border-gray-100 p-5 rounded-2xl outline-none focus:border-primary transition-all font-bold text-sm">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-black uppercase tracking-widest text-muted ml-4">Email Address</label>
+                                <input type="email" name="email" required placeholder="john@example.com" class="w-full bg-gray-50 border border-gray-100 p-5 rounded-2xl outline-none focus:border-primary transition-all font-bold text-sm">
+                            </div>
+                            <div class="space-y-2 col-span-full">
+                                <label class="text-xs font-black uppercase tracking-widest text-muted ml-4">Service Required</label>
+                                <select name="service" id="service" class="w-full bg-accent border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary outline-none transition-all font-bold text-dark appearance-none">
+                                    <option value="standard">Standard Cleaning</option>
+                                    <option value="deep">Deep Clean</option>
+                                    <option value="moving">Moving-related cleaning</option>
+                                </select>
+                            </div>
+                            <div class="space-y-2 col-span-full">
+                                <label class="text-xs font-black uppercase tracking-widest text-muted ml-4">Your Message</label>
+                                <textarea name="message" required placeholder="Tell us about your space..." rows="5" class="w-full bg-gray-50 border border-gray-100 p-5 rounded-2xl outline-none focus:border-primary transition-all font-bold text-sm"></textarea>
+                            </div>
+                            <button type="submit" class="bg-primary text-white py-5 rounded-2xl font-bold text-lg shadow-xl shadow-primary/30 col-span-full hover:-translate-y-1 transition-all">Request Free Quote</button>
                         </form>
+                        <!-- Success Message -->
+                        <div id="successMessage" class="hidden text-center space-y-6 py-10">
+                            <div class="w-20 h-20 bg-green-100 text-green-500 rounded-full flex items-center justify-center text-3xl mx-auto">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div class="space-y-2">
+                                <h3 class="text-2xl font-bold text-dark">Message Sent!</h3>
+                                <p class="text-muted font-medium">Thank you for reaching out. Our team will contact you within 2 business hours.</p>
+                            </div>
+                            <button onclick="location.reload()" class="text-primary font-bold hover:underline">Send another message</button>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Right: Map & Info -->
-                <div class="space-y-12">
-                    <div class="space-y-6">
-                        <h4 class="text-primary font-black uppercase tracking-widest text-xs">Our Location</h4>
-                        <h2 class="text-4xl font-extrabold text-dark tracking-tight">Visit our headquarters in <span class="text-primary">Dublin</span>.</h2>
-                        <p class="text-muted font-medium leading-relaxed">We provide cleaning services across Dublin, Cork, and Galway. Drop by for a coffee or give us a call to discuss your project.</p>
-                    </div>
-
-                    <!-- Map Container -->
-                    <div class="relative group">
-                        <div class="absolute -inset-4 bg-gradient-to-tr from-primary/10 to-secondary/10 rounded-[3rem] blur-xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
-                        <div class="relative h-[400px] rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white">
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d152515.25338165513!2d-6.385785055620956!3d53.32432007887309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e80ea27ac2f%3A0xa00c7a9973171a0!2sDublin%2C%20Ireland!5e0!3m2!1sen!2sie!4v1700000000000!5m2!1sen!2sie" 
-                                width="100%" 
-                                height="100%" 
-                                style="border:0; filter: grayscale(0.2) contrast(1.1);" 
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
+                <div class="space-y-16">
+                    <div class="grid sm:grid-cols-2 gap-12">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 bg-accent text-primary rounded-xl flex items-center justify-center text-xl shadow-lg shadow-primary/10"><i class="fa-solid fa-phone"></i></div>
+                            <h4 class="text-xl font-bold">Call Us</h4>
+                            <p class="text-muted text-sm font-medium leading-relaxed">Office: <a href="tel:+353852475054" class="hover:text-primary transition-colors">+353 852 475 054</a></p>
                         </div>
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 bg-accent text-primary rounded-xl flex items-center justify-center text-xl shadow-lg shadow-primary/10"><i class="fa-solid fa-envelope"></i></div>
+                            <h4 class="text-xl font-bold">Email Us</h4>
+                            <p class="text-muted text-sm font-medium leading-relaxed">info@secleaningservices.ie<br>sales@secleaningservices.ie</p>
+                        </div>
+                    </div>
+                    <div class="relative group h-[450px] rounded-[4rem] overflow-hidden shadow-2xl border-4 border-white">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d152515.25338165513!2d-6.385785055620956!3d53.32432007887309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e80ea27ac2f%3A0xa00c7a9973171a0!2sDublin%2C%20Ireland!5e0!3m2!1sen!2sie!4v1700000000000!5m2!1sen!2sie" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; filter: grayscale(0.2) contrast(1.1);" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -599,7 +436,6 @@
 
     <!-- Footer -->
     <footer class="bg-dark text-white pt-20 pb-10 relative overflow-hidden">
-        <!-- Floating Blobs for Depth -->
         <div class="blob w-[300px] h-[300px] bg-primary/20 top-0 left-0"></div>
         <div class="blob w-[200px] h-[200px] bg-secondary/10 bottom-0 right-0"></div>
 
@@ -610,59 +446,41 @@
                     <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white font-black text-xl shadow-lg shadow-primary/30">S</div>
                     <span class="text-2xl font-extrabold tracking-tight">SE <span class="text-primary font-medium">Cleaning</span></span>
                 </div>
-                <div class="text-slate-400 font-bold tracking-widest text-xs uppercase">
-                    www.secleaningservices.ie
-                </div>
+               
                 <div class="flex gap-4">
                     <span class="text-xs font-bold text-slate-500 uppercase tracking-widest self-center mr-2">Follow Us:</span>
-                    <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all hover:-translate-y-1"><i class="fa-brands fa-facebook-f text-sm"></i></a>
-                    <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all hover:-translate-y-1"><i class="fa-brands fa-instagram text-sm"></i></a>
-                    <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all hover:-translate-y-1"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+                    <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+                    <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all"><i class="fa-brands fa-instagram text-sm"></i></a>
+                    <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
                 </div>
             </div>
 
-            <!-- Main Footer Links -->
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
-                <!-- Column 1 -->
                 <div>
-                    <h4 class="text-lg font-bold mb-6 relative inline-block">
-                        Quick Links
-                        <span class="absolute -bottom-2 left-0 w-8 h-1 bg-secondary rounded-full"></span>
-                    </h4>
+                    <h4 class="text-lg font-bold mb-6 relative inline-block">Quick Links<span class="absolute -bottom-2 left-0 w-8 h-1 bg-secondary rounded-full"></span></h4>
                     <ul class="space-y-4 text-slate-400 font-medium text-sm mt-4">
                         <li><a href="#home" class="hover:text-secondary transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-primary"></i> Home</a></li>
+                        <li><a href="#services" class="hover:text-secondary transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-primary"></i> Services</a></li>
                         <li><a href="#about" class="hover:text-secondary transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-primary"></i> About Us</a></li>
-                        <li><a href="#gallery" class="hover:text-secondary transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-primary"></i> Our Gallery</a></li>
-                        <li><a href="#pricing" class="hover:text-secondary transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-primary"></i> Pricing</a></li>
+                        <li><a href="#contact" class="hover:text-secondary transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-primary"></i> Contact</a></li>
                     </ul>
                 </div>
-
-                <!-- Column 2 -->
                 <div>
-                    <h4 class="text-lg font-bold mb-6 relative inline-block">
-                        Our Services
-                        <span class="absolute -bottom-2 left-0 w-8 h-1 bg-secondary rounded-full"></span>
-                    </h4>
+                    <h4 class="text-lg font-bold mb-6 relative inline-block">Our Services<span class="absolute -bottom-2 left-0 w-8 h-1 bg-secondary rounded-full"></span></h4>
                     <ul class="space-y-4 text-slate-400 font-medium text-sm mt-4">
-                        <li><a href="services.html" class="hover:text-secondary transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-primary"></i> House Cleaning</a></li>
-                        <li><a href="services.html" class="hover:text-secondary transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-primary"></i> Office Cleaning</a></li>
-                        <li><a href="services.html" class="hover:text-secondary transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-primary"></i> Deep Sanitization</a></li>
-                        <li><a href="services.html" class="hover:text-secondary transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-primary"></i> Window Care</a></li>
+                        <li><a href="#services" class="hover:text-secondary transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-primary"></i> Deep Clean</a></li>
+                        <li><a href="#services" class="hover:text-secondary transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-primary"></i> Moving Cleaning</a></li>
+                        <li><a href="#services" class="hover:text-secondary transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-primary"></i> Standard Cleaning</a></li>
                     </ul>
                 </div>
-
-                <!-- Column 3 -->
                 <div>
-                    <h4 class="text-lg font-bold mb-6 relative inline-block">
-                        Contact Us
-                        <span class="absolute -bottom-2 left-0 w-8 h-1 bg-secondary rounded-full"></span>
-                    </h4>
+                    <h4 class="text-lg font-bold mb-6 relative inline-block">Contact Us<span class="absolute -bottom-2 left-0 w-8 h-1 bg-secondary rounded-full"></span></h4>
                     <ul class="space-y-6 text-slate-400 font-medium text-sm mt-4">
                         <li class="flex items-start gap-4">
                             <div class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center text-secondary shrink-0"><i class="fa-solid fa-phone"></i></div>
                             <div>
                                 <p class="text-white text-xs font-bold uppercase tracking-widest mb-1">Call Us</p>
-                                <p>+353 (01) 123 4567</p>
+                                <p><a href="tel:+353852475054" class="hover:text-secondary transition-colors">+353 852 475 054</a></p>
                             </div>
                         </li>
                         <li class="flex items-start gap-4">
@@ -674,65 +492,35 @@
                         </li>
                     </ul>
                 </div>
-
-                <!-- Column 4 -->
                 <div>
-                    <h4 class="text-lg font-bold mb-6 relative inline-block">
-                        Other Links
-                        <span class="absolute -bottom-2 left-0 w-8 h-1 bg-secondary rounded-full"></span>
-                    </h4>
-                    <ul class="space-y-4 text-slate-400 font-medium text-sm mt-4">
-                        <li><a href="#" class="hover:text-secondary transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-primary"></i> Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-secondary transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-primary"></i> Terms & Conditions</a></li>
-                        <li><a href="#" class="hover:text-secondary transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-primary"></i> Cookie Policy</a></li>
-                        <li><a href="#" class="hover:text-secondary transition-colors flex items-center gap-2"><i class="fa-solid fa-chevron-right text-[10px] text-primary"></i> Team & Careers</a></li>
-                    </ul>
+                    <h4 class="text-lg font-bold mb-6 relative inline-block">Ireland's Choice<span class="absolute -bottom-2 left-0 w-8 h-1 bg-secondary rounded-full"></span></h4>
+                    <p class="text-slate-400 leading-relaxed text-sm font-medium">Providing high-standard cleaning solutions across Dublin, Cork, and Galway for 18 years. We are committed to perfection.</p>
                 </div>
             </div>
 
-            <!-- Bottom Copyright Bar -->
-            <div class="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
-                <p class="text-slate-500 text-xs font-bold uppercase tracking-widest">
-                    Copyright © 2026 SE Cleaning. All Rights Reserved.
-                </p>
-                <div class="flex gap-8 text-slate-500 text-xs font-bold uppercase tracking-widest">
-                    <a href="#" class="hover:text-white transition-colors">Sitemap</a>
-                    <a href="#" class="hover:text-white transition-colors">Security</a>
-                </div>
+            <div class="pt-10 border-t border-white/10 text-center text-slate-500 text-xs font-bold uppercase tracking-widest">
+                Copyright © 2026 SE Cleaning. All Rights Reserved.
             </div>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Fancybox Initialization
-            Fancybox.bind("[data-fancybox]", {
-                // Custom options
-            });
+            Fancybox.bind("[data-fancybox]", {});
 
-            // Gallery Filtering Logic
+            // Gallery Filtering
             const filterBtns = document.querySelectorAll('.filter-btn');
             const galleryItems = document.querySelectorAll('.gallery-item');
-
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
-                    // Update active button
-                    filterBtns.forEach(b => {
-                        b.classList.remove('bg-white', 'text-primary', 'shadow-sm');
-                        b.classList.add('text-muted');
-                    });
-                    btn.classList.add('bg-white', 'text-primary', 'shadow-sm');
-                    btn.classList.remove('text-muted');
-
+                    filterBtns.forEach(b => b.classList.remove('active', 'bg-white', 'text-primary', 'shadow-sm'));
+                    btn.classList.add('active', 'bg-white', 'text-primary', 'shadow-sm');
                     const filter = btn.getAttribute('data-filter');
-
                     galleryItems.forEach(item => {
                         if (filter === 'all' || item.classList.contains(filter)) {
                             item.style.display = 'block';
-                            setTimeout(() => item.style.opacity = '1', 10);
                         } else {
-                            item.style.opacity = '0';
-                            setTimeout(() => item.style.display = 'none', 500);
+                            item.style.display = 'none';
                         }
                     });
                 });
@@ -741,18 +529,10 @@
             // Hero Slider
             new Swiper('.hero-slider', {
                 effect: 'fade',
-                fadeEffect: {
-                    crossFade: true
-                },
+                fadeEffect: { crossFade: true },
                 loop: true,
-                autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: '.hero-pagination',
-                    clickable: true,
-                },
+                autoplay: { delay: 5000, disableOnInteraction: false },
+                pagination: { el: '.hero-pagination', clickable: true },
             });
 
             // Services Slider
@@ -760,23 +540,35 @@
                 slidesPerView: 1,
                 spaceBetween: 30,
                 loop: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 2,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                    },
-                }
+                pagination: { el: '.swiper-pagination', clickable: true },
+                navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+                breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
             });
+            // Contact Form Handling
+            const contactForm = document.getElementById('contactForm');
+            const successMessage = document.getElementById('successMessage');
+
+            if(contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Simple frontend validation check
+                    const formData = new FormData(this);
+                    let isValid = true;
+                    for (let value of formData.values()) {
+                        if(!value) isValid = false;
+                    }
+
+                    if(isValid) {
+                        // Hide form and show success message
+                        contactForm.classList.add('hidden');
+                        successMessage.classList.remove('hidden');
+                        
+                        // Scroll to top of the card
+                        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                });
+            }
         });
     </script>
 </body>
