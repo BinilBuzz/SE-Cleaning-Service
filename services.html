@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | SE Cleaning Services Ireland</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F46E5', // Indigo
+                        secondary: '#F59E0B', // Amber
+                        dark: '#0F172A',
+                        muted: '#64748B',
+                        accent: '#EEF2FF'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .glass { background: rgba(253, 252, 254, 0.8); backdrop-filter: blur(10px); }
+        .blob {
+            position: absolute;
+            filter: blur(80px);
+            z-index: -1;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="font-sans text-dark bg-white overflow-x-hidden">
+
+    <!-- Header Menu -->
+    <nav class="sticky top-0 w-full z-[100] glass border-b border-gray-100">
+        <div class="container mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white font-black text-xl shadow-lg shadow-primary/30">S</div>
+                <span class="text-2xl font-extrabold tracking-tight text-dark">SE <span class="text-primary font-medium">Cleaning</span></span>
+            </div>
+            
+            <div class="hidden lg:flex space-x-12 items-center font-bold text-muted text-sm">
+                <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+                <a href="services.html" class="text-primary transition-colors">Services</a>
+                <a href="gallery.html" class="hover:text-primary transition-colors">Gallery</a>
+                <a href="index.html#pricing" class="hover:text-primary transition-colors">Pricing</a>
+                <a href="about.html" class="hover:text-primary transition-colors">About Us</a>
+                <a href="index.html#reviews" class="hover:text-primary transition-colors">Reviews</a>
+                <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="contact.html" class="hidden sm:block bg-primary text-white px-8 py-3.5 rounded-full font-bold shadow-xl shadow-primary/20 hover:scale-105 hover:bg-[#4A49C1] transition-all active:scale-95 text-sm">
+                    Book Now
+                </a>
+                <button class="lg:hidden text-2xl text-primary">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Title Section -->
+    <section class="pt-48 pb-24 bg-accent relative overflow-hidden">
+        <div class="blob w-[600px] h-[600px] bg-primary/10 -top-20 -left-20"></div>
+        <div class="max-w-[1280px] mx-auto px-6 text-center space-y-6 relative z-10">
+            <h4 class="text-primary font-black uppercase tracking-widest text-xs">Our Expertise</h4>
+            <h1 class="text-6xl font-black text-dark tracking-tight">Cleaning solutions <br><span class="text-primary">tailored for you.</span></h1>
+            <p class="text-muted max-w-2xl mx-auto font-medium text-lg leading-relaxed">From cozy homes to large corporate offices, we deliver the same high-standard precision every time.</p>
+        </div>
+    </section>
+
+    <!-- Detailed Services Content -->
+    <section class="py-32 bg-white">
+        <div class="max-w-[1280px] mx-auto px-6 space-y-32">
+            
+            <!-- Residential Section -->
+            <div class="grid lg:grid-cols-2 gap-24 items-center">
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-primary/5 rounded-[4rem] blur-2xl"></div>
+                    <img src="./assets/service_card_residential.png" class="rounded-[4rem] shadow-2xl relative z-10">
+                </div>
+                <div class="space-y-10">
+                    <div class="w-14 h-14 bg-accent text-primary rounded-2xl flex items-center justify-center text-2xl shadow-xl shadow-primary/5"><i class="fa-solid fa-house"></i></div>
+                    <h2 class="text-5xl font-extrabold text-dark tracking-tight">Residential Excellence</h2>
+                    <p class="text-muted text-lg leading-relaxed font-medium">Your home is your sanctuary. We treat it with the utmost respect, providing deep cleaning services that go beyond the surface.</p>
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div class="flex items-center gap-4 text-dark font-bold">
+                            <i class="fa-solid fa-check text-secondary"></i> Deep Kitchen Sanitize
+                        </div>
+                        <div class="flex items-center gap-4 text-dark font-bold">
+                            <i class="fa-solid fa-check text-secondary"></i> Bathroom Descaling
+                        </div>
+                        <div class="flex items-center gap-4 text-dark font-bold">
+                            <i class="fa-solid fa-check text-secondary"></i> Window Polishing
+                        </div>
+                        <div class="flex items-center gap-4 text-dark font-bold">
+                            <i class="fa-solid fa-check text-secondary"></i> Carpet Refresh
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Commercial Section -->
+            <div class="grid lg:grid-cols-2 gap-24 items-center flex-row-reverse">
+                <div class="lg:order-2 relative">
+                    <div class="absolute -inset-4 bg-secondary/5 rounded-[4rem] blur-2xl"></div>
+                    <img src="./assets/cleaning_hero_commercial.png" class="rounded-[4rem] shadow-2xl relative z-10">
+                </div>
+                <div class="lg:order-1 space-y-10">
+                    <div class="w-14 h-14 bg-accent text-primary rounded-2xl flex items-center justify-center text-2xl shadow-xl shadow-primary/5"><i class="fa-solid fa-building"></i></div>
+                    <h2 class="text-5xl font-extrabold text-dark tracking-tight">Commercial Precision</h2>
+                    <p class="text-muted text-lg leading-relaxed font-medium">A clean workspace is the foundation of a successful business. We provide flexible, out-of-hours cleaning for offices and retail spaces.</p>
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div class="flex items-center gap-4 text-dark font-bold">
+                            <i class="fa-solid fa-check text-secondary"></i> Daily Office Clean
+                        </div>
+                        <div class="flex items-center gap-4 text-dark font-bold">
+                            <i class="fa-solid fa-check text-secondary"></i> Floor Restoration
+                        </div>
+                        <div class="flex items-center gap-4 text-dark font-bold">
+                            <i class="fa-solid fa-check text-secondary"></i> Waste Management
+                        </div>
+                        <div class="flex items-center gap-4 text-dark font-bold">
+                            <i class="fa-solid fa-check text-secondary"></i> Retail Sanitization
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-20 pb-10 relative overflow-hidden">
+        <div class="blob w-[300px] h-[300px] bg-primary/20 top-0 left-0"></div>
+        <div class="blob w-[200px] h-[200px] bg-secondary/10 bottom-0 right-0"></div>
+
+        <div class="max-w-[1280px] mx-auto px-6 relative z-10">
+            <!-- Top Footer Bar -->
+            <div class="flex flex-col md:flex-row justify-between items-center mb-16 pb-8 border-b border-white/10 gap-8">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white font-black text-xl shadow-lg shadow-primary/30">S</div>
+                    <span class="text-2xl font-extrabold tracking-tight">SE <span class="text-primary font-medium">Cleaning</span></span>
+                </div>
+                <div class="text-slate-400 font-bold tracking-widest text-xs uppercase">www.secleaningservices.ie</div>
+                <div class="flex gap-4">
+                    <span class="text-xs font-bold text-slate-500 uppercase tracking-widest self-center mr-2">Follow Us:</span>
+                    <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+                    <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all"><i class="fa-brands fa-instagram text-sm"></i></a>
+                    <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+                <div>
+                    <h4 class="text-lg font-bold mb-6 relative inline-block">Quick Links<span class="absolute -bottom-2 left-0 w-8 h-1 bg-secondary rounded-full"></span></h4>
+                    <ul class="space-y-4 text-slate-400 font-medium text-sm mt-4">
+                        <li><a href="index.html" class="hover:text-secondary">Home</a></li>
+                        <li><a href="about.html" class="hover:text-secondary">About Us</a></li>
+                        <li><a href="gallery.html" class="hover:text-secondary">Our Gallery</a></li>
+                        <li><a href="contact.html" class="hover:text-secondary">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6 relative inline-block">Our Services<span class="absolute -bottom-2 left-0 w-8 h-1 bg-secondary rounded-full"></span></h4>
+                    <ul class="space-y-4 text-slate-400 font-medium text-sm mt-4">
+                        <li><a href="services.html" class="hover:text-secondary">House Cleaning</a></li>
+                        <li><a href="services.html" class="hover:text-secondary">Office Cleaning</a></li>
+                        <li><a href="services.html" class="hover:text-secondary">Deep Clean</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-2">
+                    <h4 class="text-lg font-bold mb-6 relative inline-block">Ireland's Choice<span class="absolute -bottom-2 left-0 w-8 h-1 bg-secondary rounded-full"></span></h4>
+                    <p class="text-slate-400 leading-relaxed">Providing high-standard cleaning solutions across Dublin, Cork, and Galway for 18 years. We are committed to perfection and eco-friendly practices.</p>
+                </div>
+            </div>
+
+            <div class="pt-10 border-t border-white/10 text-center text-slate-500 text-xs font-bold uppercase tracking-widest">
+                Copyright © 2026 SE Cleaning. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
